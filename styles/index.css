@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+.fullscreen-image {
+    width: 100vw; 
+    height: 90vh; 
+    object-fit: cover; 
+}
+
+#imgAterrizaje img {
+    /* background oscuro */
+    filter: brightness(50%);
+}
+
+.floating-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.floating-text path{
+  fill: white;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 1.5;
+  fill-opacity: 0;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: escribir 15.5s ease forwards;
+}
+
+@keyframes escribir{
+  0% {
+    stroke-dashoffset: 2000;
+    fill-opacity: 0;
+  }
+  64.5% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+  67.7% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+    .fullscreen-image {
+        width: 110vw;
+        height: 91vh; 
+    }
+
+    .floating-text {
+        font-size: 1rem;  
+        transform: translate(-50%, -50%) scale(0.7);  
+    }
+}

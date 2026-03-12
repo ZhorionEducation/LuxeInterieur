@@ -1,0 +1,41 @@
+.pageName{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #523b099d;
+    font-family: 'EB Garamond', serif;
+}
+
+#ulNav li a{
+    color: #523b099d;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'EB Garamond', serif;
+    /* cuanto dura el hover */
+    transition: color 0.9s ease;
+}
+
+#ulNav li a:hover{
+    color: #3f2d06;
+    text-decoration: underline;
+}
+
+#ulNav {
+    margin-right: 41%;
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+    .pageName {
+        font-size: 2.5rem;
+    }
+
+    #ulNav li a {
+        font-size: 1.2rem;
+    }
+
+    #ulNav {
+        margin-right: 0;
+        justify-content: center;
+    }
+}
