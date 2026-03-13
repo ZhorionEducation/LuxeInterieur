@@ -37,10 +37,12 @@
 
     #ulNav li a {
         font-size: 0.9rem;
+        /* que el nombre de los li no se bajen */
+        white-space: nowrap;
     }
 
     #ulNav {
         margin-right: 0;
-        margin-left: 20%;
+        margin-left: 2%;
     }
 }
