@@ -17,11 +17,11 @@
     font-family: 'EB Garamond', serif;
     /* cuanto dura el hover */
     transition: color 0.9s ease;
+    text-decoration: none;
 }
 
 #ulNav li a:hover{
     color: #3f2d06;
-    text-decoration: underline;
 }
 
 #ulNav {
@@ -36,11 +36,11 @@
     }
 
     #ulNav li a {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     #ulNav {
         margin-right: 0;
-        justify-content: center;
+        margin-left: 20%;
     }
 }
