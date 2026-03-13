@@ -25,14 +25,18 @@
 }
 
 #ulNav {
-    margin-left: auto;
-    margin-right: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.75rem 1rem;
-    justify-content: flex-end;
-    
-    }
+    max-width: 62%;
+}
 
 /* responsive */
 
@@ -46,7 +50,9 @@
     }
 
     #ulNav {
-        margin-right: 0;
-        margin-left: 2%;
+        position: static;
+        transform: none;
+        max-width: 100%;
+        margin: 0.5rem auto 0;
     }
 }
