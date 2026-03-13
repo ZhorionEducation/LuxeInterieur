@@ -5,6 +5,11 @@
     font-family: 'EB Garamond', serif;
 }
 
+/* Sombra al nav */
+.navbar {
+    box-shadow: 0 4px 8px rgba(230, 227, 227, 0.575);
+}
+
 #ulNav li a{
     color: #523b099d;
     font-size: 1.2rem;

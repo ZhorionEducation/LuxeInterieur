@@ -6,7 +6,9 @@
     <title>Luxe Intérieur</title>
     <link rel="stylesheet" href="./styles/nav.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/about.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/tipoLetra.css">
     <link rel="shortcut icon" href="./img/nav/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css" integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- google fonts -->
@@ -17,6 +19,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     
 </head>
 <body>
@@ -39,14 +44,50 @@
         </div>
     </nav>
 
-    <!-- aterrizaje -->
-    <div class="container-fluid p-0" id="imgAterrizaje">
-        <img src="./img/aterrizaje/aterrizaje.png" alt="Aterrizaje" class="fullscreen-image">
-        <!-- texto flotante en la mitad de la imagen -->
-        <div class="floating-text">
-            <span id="floating"></span>
+    <!-- Seccion de acerda de nostros -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4 text-light">¿Quién es  <span id="nombrePaginaFooter">Luxe Intérieur</span>?</h2>
+        
+        <!-- Cards -->
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <p class="card-text">Luxe Intérieur es una empresa de diseño de interiores dedicada a transformar espacios en ambientes elegantes y funcionales. Con un equipo de diseñadores talentosos, ofrecemos soluciones personalizadas para hogares y oficinas, combinando estilo y comodidad para crear espacios únicos que reflejen la personalidad de nuestros clientes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2><i class="fa-solid fa-book"></i>Visión</h2>
+                        <p class="card-text">Ser reconocidos como un proyecto innovador en el diseño de interiores, destacándonos por nuestra elegancia, creatividad y capacidad para transformar hogares en espacios sofisticados, cómodos y llenos de estilo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2><i class="fa-solid fa-book"></i>Misión</h2>
+                        <p class="card-text">Ofrecer diseños de interiores elegantes y funcionales que transformen los espacios del hogar, combinando creatividad, estilo y armonía para crear ambientes únicos que reflejen la personalidad y el buen gusto de cada cliente.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+
+
+    </section>
+
+    <!-- seccion para el mapa de ubicacion -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4 text-light">Nuestra ubicación</h2>
+        <div class="map-container" id="mapContainer">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.5358653489961!2d-75.59719985808455!3d6.244817576818814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429a1efd10e9f%3A0x5d25619cdedf2b3a!2sTv%2034A%20%23%2076E-42%2C%20Laureles%20-%20Estadio%2C%20Medell%C3%ADn%2C%20Laureles%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1773428545766!5m2!1ses-419!2sco" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="frameGoogleMaps"></iframe>
+        </div>
+    </section>
+
+
+    <!-- footer -->
 
     <footer class="bg-light text-center py-2">
         <div class="d-flex justify-content-center align-items-center">
@@ -66,7 +107,6 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js" integrity="sha512-nKXmKvJyiGQy343jatQlzDprflyB5c+tKCzGP3Uq67v+lmzfnZUi/ZT+fc6ITZfSC5HhaBKUIvr/nTLCV+7F+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="./js/textoRepetitivoAterrizaje.js"></script>
+
 </body>
 </html>
