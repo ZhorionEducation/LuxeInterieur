@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="./styles/nav.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/tipoLetra.css">
+    <link rel="stylesheet" href="./styles/services.css">
+    <link rel="stylesheet" href="./styles/trabajadores.css">
+    <link rel="stylesheet" href="./styles/video.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <link rel="stylesheet" href="./styles/btnCatalogo.css">
     <link rel="shortcut icon" href="./img/nav/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css" integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- google fonts -->
@@ -22,6 +28,15 @@
     
 </head>
 <body>
+    <!-- Boton siempre visible abajo a la derecha de catalogo -->
+    <a href="https://www.canva.com/design/DAHDyQEZTPI/3qUN9Da6HhksJArkvTAnmA/view?utm_content=DAHDyQEZTPI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h632d250130" target="_blank" class="floating-catalog-btn" title="Descargar Catálogo">
+        <div class="btn-pulse"></div>
+        <div class="btn-content">
+            <i class="fas fa-file-pdf"></i>
+            <span class="btn-label">Catálogo</span>
+        </div>
+    </a>
+
     <!-- Nav -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -35,11 +50,59 @@
             </div>
             <ul class="navbar-nav gap-4 d-flex flex-row" id="ulNav">
                 <li><a href="about.html"><i class="fa-solid fa-circle-info"></i>Acerca de nosotros</a></li>
-                <li><a href="services.html"><i class="fa-solid fa-bell-concierge"></i>Servicios</a></li>
-                <li><a href="contact.html"><i class="fa-brands fa-whatsapp"></i>Contacto</a></li>
+                <li><a href="#servicios"><i class="fa-solid fa-bell-concierge"></i>Servicios</a></li>
+                <li><a href="#" onclick="abrirModalContacto(event)"><i class="fa-brands fa-whatsapp"></i>Contacto</a></li>
             </ul>
         </div>
     </nav>
+
+    <!-- MODAL DE CONTACTO -->
+    <div class="modal-overlay" id="modalContacto">
+        <div class="modal-content">
+            <button class="modal-close" onclick="cerrarModalContacto()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h2 class="modal-title">Ponerse en Contacto</h2>
+            <p class="modal-subtitle">Elige tu forma preferida de contactarnos</p>
+            
+            <div class="contact-options">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/+573156789012?text=Hola%20Luxe%20Intérieur%2C%20me%20gustaría%20conocer%20más%20sobre%20sus%20servicios" 
+                target="_blank" class="contact-card whatsapp">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>+57 555 555 5555</p>
+                    <span class="contact-cta">Chatear ahora</span>
+                </a>
+                
+                <!-- Instagram -->
+                <a href="https://instagram.com/luxeinterieur1" 
+                target="_blank" class="contact-card instagram">
+                    <div class="contact-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p>@luxeinterieur1</p>
+                    <span class="contact-cta">Seguir perfil</span>
+                </a>
+                
+                <!-- Gmail -->
+                <a href="mailto:contacto@luxeinterieur.com" class="contact-card gmail">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Gmail</h3>
+                    <p>contacto@luxeinterieur.com</p>
+                    <span class="contact-cta">Enviar email</span>
+                </a>
+            </div>
+            
+            <p class="modal-footer">Nos encantaría escucharte. Responderemos lo antes posible.</p>
+        </div>
+    </div>
 
     <!-- aterrizaje -->
     <div class="container-fluid p-0" id="imgAterrizaje">
@@ -49,7 +112,256 @@
             <span id="floating"></span>
         </div>
     </div>
+    <!-- Seccion de servicios (SIN BOOTSTRAP) -->
+    <section class="servicios-section" id="servicios">
+        <div class="servicios-container">
+            <h2 class="servicios-title">Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <!-- Card 1 -->
+                <div class="servicio-card">
+                    <div class="card-image">
+                        <img src="./img/servicios/planificacion_diseño.jpeg" alt="Renovación">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Planificación y diseño</h3>
+                        <p class="card-subtitle">Espacios que funcionan y enamoran</p>
+                        <p class="card-description">Planificamos cada zona para aprovechar mejor tu espacio.</p>
+                        <details class="card-details">
+                            <summary class="details-summary">Ver más</summary>
+                            <p class="details-text">Analizamos circulación, iluminación y uso diario para diseñar propuestas prácticas y elegantes que se adapten a tus necesidades reales.</p>
+                        </details>
+                    </div>
+                </div>
 
+                <!-- Card 2 -->
+                <div class="servicio-card">
+                    <div class="card-image">
+                        <img src="./img/servicios/remodelacion_espacios.jpeg" alt="Remodelación">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Remodelación de espacios</h3>
+                        <p class="card-subtitle">Nueva vida a tus ambientes</p>
+                        <p class="card-description">Renovamos tus ambientes para darles una nueva vida.</p>
+                        <details class="card-details">
+                            <summary class="details-summary">Ver más</summary>
+                            <p class="details-text">Realizamos remodelaciones parciales o completas para mejorar distribución, acabados y funcionalidad, manteniendo la esencia de tu estilo.</p>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="servicio-card">
+                    <div class="card-image">
+                        <img src="./img/servicios/transformacion_ambientes_residencial.jpeg" alt="Transformación">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Transformación integral</h3>
+                        <p class="card-subtitle">Residencial y comercial</p>
+                        <p class="card-description">Transformamos espacios para que se vean mejor y funcionen mejor.</p>
+                        <details class="card-details">
+                            <summary class="details-summary">Ver más</summary>
+                            <p class="details-text">Aplicamos soluciones integrales de diseño para modernizar ambientes residenciales y comerciales, elevando su imagen y experiencia de uso.</p>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="servicio-card">
+                    <div class="card-image">
+                        <img src="./img/servicios/carpinteria.jpeg" alt="Carpintería">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Carpintería personalizada</h3>
+                        <p class="card-subtitle">Madera a la medida</p>
+                        <p class="card-description">Diseñamos piezas de madera a medida para tu espacio.</p>
+                        <details class="card-details">
+                            <summary class="details-summary">Ver más</summary>
+                            <p class="details-text">Fabricamos clósets, bibliotecas, panelados y muebles especiales con acabados de calidad, optimizando cada centímetro disponible.</p>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="servicio-card">
+                    <div class="card-image">
+                        <img src="./img/servicios/seleccion_colores.jpeg" alt="Orientación">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Orientación profesional</h3>
+                        <p class="card-subtitle">Decisiones inteligentes</p>
+                        <p class="card-description">Tomamos decisiones de diseño contigo, de forma clara y profesional.</p>
+                        <details class="card-details">
+                            <summary class="details-summary">Ver más</summary>
+                            <p class="details-text">Evaluamos opciones según tu presupuesto y objetivos para que cada elección tenga coherencia estética y funcional.</p>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="servicio-card">
+                    <div class="card-image">
+                        <img src="./img/servicios/diseño_iluminacion.jpeg" alt="Iluminación">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Diseño de iluminación</h3>
+                        <p class="card-subtitle">Luz que transforma</p>
+                        <p class="card-description">Diseñamos iluminación para resaltar y ambientar cada espacio.</p>
+                        <details class="card-details">
+                            <summary class="details-summary">Ver más</summary>
+                            <p class="details-text">Combinamos luz general, puntual y decorativa para mejorar la experiencia visual y la funcionalidad en cada ambiente.</p>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="servicio-card">
+                    <div class="card-image">
+                        <img src="./img/servicios/propuestas_iluminacion.jpeg" alt="Propuestas lumínicas">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Propuestas lumínicas</h3>
+                        <p class="card-subtitle">Arquitectura realzada</p>
+                        <p class="card-description">Creamos propuestas lumínicas que realzan la arquitectura interior.</p>
+                        <details class="card-details">
+                            <summary class="details-summary">Ver más</summary>
+                            <p class="details-text">Definimos temperatura de color, intensidades y puntos de luz para destacar volúmenes, texturas y zonas clave del proyecto.</p>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Card 12 -->
+                <div class="servicio-card">
+                    <div class="card-image">
+                        <img src="./img/servicios/diseño_interiores.jpeg" alt="Elementos decorativos">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Elementos decorativos</h3>
+                        <p class="card-subtitle">Detalles que enamoran</p>
+                        <p class="card-description">Seleccionamos colores, materiales, muebles y accesorios.</p>
+                        <details class="card-details">
+                            <summary class="details-summary">Ver más</summary>
+                            <p class="details-text">Cada elemento es cuidadosamente seleccionado para crear coherencia estética y una experiencia visual que refleje tu personalidad.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- seccion de nuestros mejores trabajadores -->
+    <section class="trabajadores-section" id="trabajadores">
+        <div class="trabajadores-container">
+            <h2 class="trabajadores-title">Fundadoras de Luxe Intérieur</h2>
+            <p class="trabajadores-subtitle">El equipo detrás de cada proyecto</p>
+            <div class="trabajadores-grid">
+                <!-- Trabajador 1 -->
+                <div class="trabajador-card">
+                    <div class="trabajador-image-container">
+                        <img src="./img/trabajadores/ximena.jpeg" alt="Juan Pérez" class="trabajador-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="trabajador-content">
+                        <h3 class="trabajador-name">Ximena Ruiz</h3>
+                        <p class="trabajador-role">Diseñadora de Interiores</p>
+                        <p class="trabajador-description">Especialista en espacios modernos y funcionales con más de 10 años de experiencia.</p>
+                        <div class="trabajador-social">
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trabajador 2 -->
+                <div class="trabajador-card">
+                    <div class="trabajador-image-container">
+                        <img src="./img/trabajadores/johana.jpeg" alt="María Gómez" class="trabajador-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="trabajador-content">
+                        <h3 class="trabajador-name">Kelly Johanna</h3>
+                        <p class="trabajador-role">Arquitecta</p>
+                        <p class="trabajador-description">Experta en diseño arquitectónico y sostenibilidad. Proyectos residenciales y comerciales.</p>
+                        <div class="trabajador-social">
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trabajador 3 -->
+                <div class="trabajador-card">
+                    <div class="trabajador-image-container">
+                        <img src="./img/trabajadores/yulie.jpeg" alt="Carlos Rodríguez" class="trabajador-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="trabajador-content">
+                        <h3 class="trabajador-name">Yulie Ivonne</h3>
+                        <p class="trabajador-role">Diseñadora de interiores</p>
+                        <p class="trabajador-description">Artesana de la madera con técnicas tradicionales y modernas. Muebles a medida.</p>
+                        <div class="trabajador-social">
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video de un plano -->
+    <section class="video-section" id="video">
+        <div class="video-container">
+            <h2 class="video-title">Nuestro Proceso de Diseño</h2>
+            <p class="video-subtitle">Descubre cómo transformamos tus espacios en realidades extraordinarias</p>
+            
+            <div class="video-wrapper">
+                <div class="video-frame">
+                    <video 
+                        width="100%" 
+                        height="100%" 
+                        controls 
+                        controlsList="nodownload"
+                        poster="./img/aterrizaje/aterrizaje.png">
+                        <source src="./videos/planos.mp4" type="video/mp4">
+                        Tu navegador no soporta videos HTML5
+                    </video>
+                </div>
+                <div class="video-overlay"></div>
+            </div>
+            
+            <div class="video-features">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3>Análisis</h3>
+                    <p>Evaluamos cada espacio</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Concepto</h3>
+                    <p>Desarrollamos ideas innovadoras</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Ejecución</h3>
+                    <p>Realizamos tu proyecto</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- modal de contactos -->
+
+
+    <!-- booter de derechos -->
     <footer class="bg-light text-center py-2">
         <div class="d-flex justify-content-center align-items-center">
             <div>
@@ -62,13 +374,13 @@
                     <img src="./img/footer/logo-cedenorte.png" alt="Cedenorte Logo" width="100" height="50" class="d-inline-block align-top">
                 </div>
             </div>
-
         </div>
-        
     </footer>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js" integrity="sha512-nKXmKvJyiGQy343jatQlzDprflyB5c+tKCzGP3Uq67v+lmzfnZUi/ZT+fc6ITZfSC5HhaBKUIvr/nTLCV+7F+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="./js/textoRepetitivoAterrizaje.js"></script>
+    <script src="./js/modalContacto.js"></script>
 </body>
 </html>

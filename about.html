@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./styles/about.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/tipoLetra.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <link rel="stylesheet" href="./styles/btnCatalogo.css">
     <link rel="shortcut icon" href="./img/nav/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css" integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- google fonts -->
@@ -25,6 +27,15 @@
     
 </head>
 <body>
+    <!-- Boton siempre visible abajo a la derecha de catalogo -->
+    <a href="https://www.canva.com/design/DAHDyQEZTPI/3qUN9Da6HhksJArkvTAnmA/view?utm_content=DAHDyQEZTPI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h632d250130" target="_blank" class="floating-catalog-btn" title="Descargar Catálogo">
+        <div class="btn-pulse"></div>
+        <div class="btn-content">
+            <i class="fas fa-file-pdf"></i>
+            <span class="btn-label">Catálogo</span>
+        </div>
+    </a>
+
     <!-- Nav -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -38,8 +49,8 @@
             </div>
             <ul class="navbar-nav gap-4 d-flex flex-row" id="ulNav">
                 <li><a href="about.html"><i class="fa-solid fa-circle-info"></i>Acerca de nosotros</a></li>
-                <li><a href="services.html"><i class="fa-solid fa-bell-concierge"></i>Servicios</a></li>
-                <li><a href="contact.html"><i class="fa-brands fa-whatsapp"></i>Contacto</a></li>
+                <li><a href="index.html"><i class="fa-solid fa-bell-concierge"></i>Servicios</a></li>
+                <li><a href="#" onclick="abrirModalContacto(event)"><i class="fa-brands fa-whatsapp"></i>Contacto</a></li>
             </ul>
         </div>
     </nav>
@@ -107,6 +118,7 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js" integrity="sha512-nKXmKvJyiGQy343jatQlzDprflyB5c+tKCzGP3Uq67v+lmzfnZUi/ZT+fc6ITZfSC5HhaBKUIvr/nTLCV+7F+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/modalContacto.js"></script>
 
 </body>
 </html>
