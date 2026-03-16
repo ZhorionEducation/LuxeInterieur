@@ -1,5 +1,9 @@
 /* ===== SERVICIOS SECTION ===== */
 
+#servicios{
+    font-family: 'EB Garamond', serif;
+}
+
 .servicios-section {
     padding: 80px 20px;
     background: linear-gradient(135deg, #1a1919 0%, #2e2d2d 100%);
