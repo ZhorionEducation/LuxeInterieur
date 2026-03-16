@@ -4,6 +4,14 @@ body {
     background-color: #1a1919 !important;
 }
 
+.mision-vision-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Espaciado entre misión y visión */
+    padding: 20px;
+}
+
 .about-section {
     padding: 80px 20px;
     background: linear-gradient(135deg, #1a1919 0%, #2e2d2d 100%);
