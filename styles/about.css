@@ -201,6 +201,10 @@ body {
     .about-section {
         padding: 60px 15px;
     }
+
+    .mision-vision-section {
+        flex-direction: column; 
+    }
     
     .about-title {
         font-size: 1.8rem;
